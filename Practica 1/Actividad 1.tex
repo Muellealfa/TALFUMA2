@@ -1,0 +1,70 @@
+\documentclass[fleqn, 10pt]{article}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsthm, amsmath}
+\usepackage{nccmath} %Para centrar ecuaciones
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+% Personalizo mi alfabeto
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\newcommand{\Lb}{\pazocal{L}}
+
+% Definimos los entornos para definiciones, teoremas, etc...
+\theoremstyle{plain}
+\newtheorem{proposicion}{Proposición}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem{example}{Ejemplo}[section]
+
+%Definimos el título
+\title{Teoría de Autómatas y Lenguajes Formales\\[.4\baselineskip]Práctica 1: Latex y expresiones regurales}
+\author{Juan de Dios, Alfaro López}
+\date{\today}
+
+%Comienzo del documento
+\begin{document}
+
+%Generamos el título
+\maketitle
+
+\section{Relaciones}
+
+\definition{Potencias de una relación }
+\\
+Dado $R \subseteq A \times A$ 
+\\
+
+$
+R^n= \left\{ \begin{array}{lcc}
+             R &   si  & n \leq 1 \\
+             \\ \left\lbrace\left(a,b\right) : \exists x \in A ,\left(a,x\right)\in R^{n-1}\land\left(x,b\right)\in R\right\rbrace&  si & n > 1 \\
+             \end{array}
+   \right.
+$
+
+
+\example
+Encuentra el conjunto de potencia $R^3$ de $R = \left\lbrace\left(1,1\right),\left(1,2\right),\left(2,3\right),\left(3,4\right)\right\rbrace$
+
+\begin{ceqn}	%Para definir ecuación centrada en el texto
+    \begin{align*} %Ecuación multilínea con alineamiento personalizado (split y align)
+    R^2 = \left\lbrace\left(1,1\right),\left(1,2\right),\left(1,3\right),\left(2,4\right)\right\rbrace
+    \end{align*} 
+  \end{ceqn} 
+  
+  \begin{ceqn}	%Para definir ecuación centrada en el texto
+    \begin{align*} %Ecuación multilínea con alineamiento personalizado (split y align)
+    R^3 = \left\lbrace\left(1,1\right),\left(1,2\right),\left(1,3\right),\left(1,4\right)\right\rbrace
+    \end{align*} 
+  \end{ceqn} 
+
+
+
+
+
+
+\end{document}
