@@ -1,0 +1,66 @@
+\documentclass[fleqn, 10pt]{article}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsthm, amsmath}
+\usepackage{nccmath} %Para centrar ecuaciones
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+% Personalizo mi alfabeto
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\newcommand{\Lb}{\pazocal{L}}
+
+% Definimos los entornos para definiciones, teoremas, etc...
+\theoremstyle{plain}
+\newtheorem{proposicion}{Proposición}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem{example}{Ejemplo}[section]
+
+%Definimos el título
+\title{Teoría de Autómatas y Lenguajes Formales\\[.4\baselineskip]Práctica 2: Latex y Autómatas finitos}
+\author{Juan de Dios, Alfaro López}
+\date{\today}
+
+%Comienzo del documento
+\begin{document}
+
+\maketitle
+
+\section{Actividad 1:}
+
+Haz un DFA sobre el alfabeto $\left\lbrace a,b \right\rbrace$ que solo contenga la cadena $a$:
+
+M = DFA
+
+\begin{ceqn}	%Para definir ecuación centrada en el texto
+    \begin{align*} %Ecuación multilínea con alineamiento personalizado (split y align)
+     M = \left (\left\lbrace q_0,q_1,q_2\right\rbrace,\left\lbrace a,b \right\rbrace,\left\lbrace \left(q_0,a,q_1\right),\left(q_0,b,q_2\right),\left(q_1,a,q_2\right),\left(q_1,b,q_2\right),\left(q_2,a,q_2\right),\left(q_2,b,q_2\right) \right\rbrace,\left\lbrace q_0 \right\rbrace,\left\lbrace q_1 \right\rbrace \right)
+    \end{align*} 
+  \end{ceqn} 
+  
+
+\begin{ceqn}	%Para definir ecuación centrada en el texto
+    \begin{align*} %Ecuación multilínea con alineamiento personalizado (split y align)
+    \fbox{\includegraphics[width=250bp]{DIAGRAMA.png}}
+    \end{align*} 
+  \end{ceqn}
+ \begin{verbatim}
+    "name" : "DFA",
+    "representation" : {
+      "K" : ["q0", "q1","q2"],
+      "A" : ["a", "b"],
+      "s" : "q0",
+      "F" : ["q1"],
+      "t" : [["q0", "a", "q1"],
+             ["q0", "b", "q2"],
+             ["q1", "a", "q2"],
+             ["q1", "b", "q2"],
+             ["q2", "a", "q2"],
+             ["q2", "b", "q2"],
+             ]
+ \end{verbatim}
+\end{document}
