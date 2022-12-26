@@ -1,0 +1,72 @@
+\documentclass[fleqn, 10pt]{article}
+
+% Paquetes necesarios
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsthm, amsmath}
+\usepackage{nccmath} %Para centrar ecuaciones
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+% Personalizo mi alfabeto
+\DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\newcommand{\Lb}{\pazocal{L}}
+
+% Definimos los entornos para definiciones, teoremas, etc...
+\theoremstyle{plain}
+\newtheorem{proposicion}{Proposición}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem{example}{Ejemplo}[section]
+
+%Definimos el título
+\title{Teoría de Autómatas y Lenguajes Formales\\[.4\baselineskip]Práctica 3: Turing Machine, recursive functions and WHILE language}
+\author{Juan de Dios, Alfaro López}
+\date{\today}
+
+%Comienzo del documento
+\begin{document}
+
+\maketitle
+
+\section{Define the TM solution of exercise 3.4 of the problem list and test its correct behaviour:}
+
+\begin{ceqn}	%Para definir ecuación centrada en el texto
+    \begin{align*} %Ecuación multilínea con alineamiento personalizado (split y align)
+    \fbox{\includegraphics[width=250bp]{TuringMachine.jpeg}}
+    \end{align*} 
+  \end{ceqn}
+
+
+
+
+\section{Define a recursive function for the sum of \ \ \ three values:}
+
+ 
+
+\begin{ceqn}	%Para definir ecuación centrada en el texto
+    \begin{align*} %Ecuación multilínea con alineamiento
+    <\ <\pi_1^1|\sigma(\pi_3^3)>|\sigma(\pi_4^4)>
+	\end{align*} 
+\end{ceqn}
+
+\section{Implement a WHILE program that computes the sum of three values. You must use an auxiliary variable that accumulates the result of the sum:} 
+
+\begin{ceqn}	%Para definir ecuación centrada en el texto
+    \begin{align*} %Ecuación multilínea con alineamiento
+    Q: \ (3,\ 4, \ s) \ \ \ \ \ \ \ \ \\
+    s: \ \ \ \ \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \ \\
+    while \ X2\ != 0\  \ do \\
+    X2\ := \ X2 \ - \ 1 \\
+    X1\ := \ X1 \ + \ 1 \\
+    od; \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\
+    while \ X3\ != 0\  \ do \\
+    X3\ := \ X3 \ - \ 1 \\
+    X1\ := \ X1 \ + \ 1 \\
+    od; \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\
+	\end{align*} 
+\end{ceqn}
+
+
+\end{document}
